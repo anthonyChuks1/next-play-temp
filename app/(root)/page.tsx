@@ -3,6 +3,7 @@ import React from 'react'
 export default async function page() {
   
   const response = await fetch("https://jsonplaceholder.typicode.com/albums");
+  // const response = await fetch("http://localhost:3000/api/books/1");
   if(!response.ok) throw new Error ("Failed to fetch data");
   const albums = await response.json();
   const selectedAlbums: { id: number; title: string }[] = []
